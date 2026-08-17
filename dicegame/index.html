@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dice Battle 🎲</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎲 Dice Battle</h1>
+        <p>Roll. Score. Conquer.</p>
+    </header>
+
+
+    <!-- PLAYER SETUP -->
+
+    <section class="setup" id="setup">
+
+        <div class="setup-card">
+
+            <h2>Choose Players</h2>
+
+            <p>Select how many players will battle.</p>
+
+            <div class="player-selection">
+
+                <button onclick="selectPlayers(3)" id="threeBtn">
+                    👥 3 Players
+                </button>
+
+                <button onclick="selectPlayers(4)" id="fourBtn">
+                    👥 4 Players
+                </button>
+
+            </div>
+
+            <p id="selectedPlayers">
+                No player count selected
+            </p>
+
+            <button class="start-btn" onclick="startGame()">
+                🚀 Start Game
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAME -->
+
+    <main id="game">
+
+        <div class="game-header">
+
+            <div>
+                <span>Round</span>
+                <strong id="roundNumber">1</strong>
+                <span>/ 5</span>
+            </div>
+
+            <div class="turn-display" id="turnDisplay">
+                Player 1's Turn
+            </div>
+
+        </div>
+
+
+        <!-- PLAYERS -->
+
+        <section class="players" id="playersContainer">
+        </section>
+
+
+        <!-- HISTORY -->
+
+        <section class="history">
+
+            <h2>📜 Roll History</h2>
+
+            <div id="historyList">
+                No rolls yet.
+            </div>
+
+        </section>
+
+
+        <!-- WINNER -->
+
+        <section class="winner" id="winner">
+
+        </section>
+
+
+        <button class="new-game" onclick="resetGame()">
+            🔄 New Game
+        </button>
+
+    </main>
+
+
+    <footer>
+        <p>🎲 Dice Battle • Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+  </html>
